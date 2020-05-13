@@ -1,12 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&family=Pacifico&display=swap" rel="stylesheet">
     <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+            background: darkslateblue;
+            animation: color-me-in 5s infinite;
+        }
+
+        .grass,
+        .sky,
+        .road {
+            position: relative;
+        }
+
+        .sky {
+            /* height: 20%; */
+            background: skyblue;
+            animation: color-me-in 5s;
+        }
+
+        .grass {
+            height: 30%;
+            background: darkslateblue;
+            animation: color-me-in 5s infinite;
+
+        }
+
+        .road {
+            height: 30%;
+            background: dimgrey;
+            box-sizing: border-box;
+            border-top: 10px solid grey;
+            border-bottom: 10px solid grey;
+            width: 100%;
+        }
+
+        .lines {
+            box-sizing: border-box;
+            border: 5px dashed #fff;
+            height: 0px;
+            width: 100%;
+            position: absolute;
+            top: 45%;
+        }
+
+        .mario {
+            position: absolute;
+            top: 60px;
+            left: 0px;
+            /* transform: scale(2); */
+            /* animation-name: drive;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            /* animation-delay: 2s; */
+            /* animation-iteration-count: infinite;
+            animation-timing-function: ease-in;  */
+            animation: drive 3s both infinite linear;
+
+        }
+
+        .luigi {
+            opacity: 0.8;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            animation: drive1 4s both infinite linear;
+            /* animation-name: drive; */
+            /* animation-duration: 4s;
+            animation-fill-mode: both;
+            /* animation-delay: 2s; */
+            /*    
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+        }
+
+        .cloud {
+            font-family: 'Fondamento', cursive;
+            position: absolute;
+            z-index: 50;
+        }
+
+        .cloud:nth-child(1) {
+            width: 590px;
+            top: 50px;
+            opacity: 1;
+            animation: wind 8s linear infinite forwards;
+        }
+
+
+        @keyframes drive {
+            from {
+                transform: translateX(-100px)
+            }
+
+            to {
+                transform: translateX(2500px)
+            }
+        }
+
+        @keyframes drive1 {
+            from {
+                transform: translateX(-800px)
+            }
+
+            to {
+                transform: translateX(1500px)
+            }
+        }
+
+        @keyframes wind {
+            from {
+                left: 300px;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes color-me-in {
+
+            /* You could think of as "step 1" */
+            0% {
+                background: darkblue;
+            }
+
+            /* You could think of as "step 2" */
+            100% {
+                background: darkslateblue;
+            }
+        }
     </style>
 </head>
+
 <body>
+    <div class="sky">
+        <h1 class="cloud">New site Coming Up</h1>
+        <h1 class="cloud"></h1>
+    </div>
+    <div class="grass"></div>
+    <div class="road">
+        <div class="lines"></div>
+        <img class="mario" src="img/Asset 2.png">
+        <img class="luigi" src="img/Asset 1.png">
+    </div>
 </body>
+
 </html>
